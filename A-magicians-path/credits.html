@@ -7,7 +7,6 @@
 
     const p = document.getElementById("p");
 
-    // Falls das JSON ein Array ist: Jede Zeile einzeln ausgeben
     if (Array.isArray(data)) {
       p.innerHTML = data.join("<br>");
     } else {

@@ -6,6 +6,7 @@
     <title>LordAxi</title>
     <script src="main.js"></script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
       body {
         width: 100%;
         margin: 0;
@@ -63,92 +64,101 @@
         flex-direction: column;
         justify-content: center;
       }
+      span {
+        font-family: "Jersey 15", monospace;
+      }
       h1 {
-        width: fit-content;
-        font-size: 100px;
-        background-image: linear-gradient(to right, #00ccff 0%, #cc00ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: coral;
+        font-family: "Jersey 15", monospace;
+        font-size: 1100%;
+        white-space: nowrap; /* verhindert Zeilenumbruch */
+        overflow: hidden;
+        width: 0ch;
+        animation: h1 1.8s steps(18) forwards;
+        max-width: max-content;
+        background-color: transparent;
+        align-self: center;
+        margin: 0;
+      }
+      @keyframes h1 {
+        0% {
+          width: 0ch;
+        }
+        100% {
+          width: 18ch;
+        }
       }
       h2 {
-        width: fit-content;
-        font-size: 25px;
-        background-image: linear-gradient(to right, #00ccff 0%, #cc00ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: coral;
+        font-family: "Jersey 15", monospace;
+        font-size: 500%;
+        white-space: nowrap; /* verhindert Zeilenumbruch */
+        overflow: hidden;
+        width: 0ch;
+        animation: h2 6.9s steps(69) forwards;
+        max-width: max-content;
+        background-color: transparent;
+        align-self: center;
+        margin: 0;
       }
-      div.wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+      @keyframes h2 {
+        0% {
+          width: 0ch;
+        }
+        100% {
+          width: 69ch;
+        }
       }
-      div.line {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+      img.Profile {
+        position: absolute;
+        right: -5vh;
+        top: 11vh;
+        height: 70vh;
+        width: 70vh;
+        border: 4vh solid coral;
+        border-radius: 100% 0 0 100%;
       }
-      div.Project {
-        border: 2px solid transparent;
-        border-radius: 50px;
-        aspect-ratio: 6/9;
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      .Profile_Background {
+        position: absolute;
+        right: -9vh;
+        top: 7vh;
+        height: 78vh;
+        width: 78vh;
+        border: 4vh solid rgba(255, 127, 80, 0.532);
+        border-radius: 100% 0 0 100%;
       }
-      img {
-        width: 400px;
-      }
-      .Projects {
-        gap: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 20px;
-      }
-      .Project1 {
-        background: linear-gradient(black, black) padding-box,
-          linear-gradient(to right, #00ccff 0%, #cc00ff 200%) border-box;
-      }
-      .Project2 {
-        background: linear-gradient(black, black) padding-box,
-          linear-gradient(to right, #00ccff -200%, #cc00ff 100%) border-box;
-      }
-      .Project1:hover {
-        box-shadow: 0px 0px 25px 7px #00ccff;
-      }
-      .Project2:hover {
-        box-shadow: 0px 0px 25px 7px #cc00ff;
+      img.GitHub {
+        position: absolute;
+        right: 75vh;
+        top: 50 - 4/2 + 10 / 2vh;
+        bottom: 50 - 4/2 + 10 / 2vh;
+        height: 4vh;
+        width: 4vh;
+        border: 10px solid coral;
+        border-radius: 100%;
       }
     </style>
   </head>
   <body>
     <div id="menu" class="menu"></div>
     <ul class="topbar-elements">
-      <li><span>A magicians path</span></li>
+      <li><span>LordAxi</span></li>
       <li>
         <span onclick="menu_animation()">Menu</span>
       </li>
     </ul>
     <div class="wrapper">
-      <div class="line"><h1>LordAxi</h1></div>
-      <div class="line"><h2>Projects:</h2></div>
-      <div class="line">
-        <div class="Projects">
-          <a href="/Tabnova">
-            <div class="Project Project1">
-              <img src="https://lordaxi.github.io/Tabnova-Assets/Tabnova.png" />
-            </div>
-          </a>
-          <a href="/A-magicians-path">
-            <div class="Project Project2">
-              <img
-                src="https://github.com/LordAxi/A-magicians-path/blob/main/assets/textures/entities/player/player.png?raw=true"
-              />
-            </div>
-          </a>
-        </div>
-      </div>
+      <h1>Hi, i am LordAxi 👋</h1>
+      <h2>Just a random developer</h2>
+      <h2>who is having fun at learning to code.</h2>
+      <img class="Profile" src="Images/panda-8171354_1920.jpg" />
+      <div class="Profile_Background"></div>
+      <a href="https://github.com/LordAxi"
+        ><img
+          class="GitHub"
+          src="https://www.google.com/s2/favicons?sz=64&domain=github.com"
+          alt="GitHub"
+      /></a>
     </div>
   </body>
 </html>
